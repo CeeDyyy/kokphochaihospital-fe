@@ -7,7 +7,7 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      prompt: ["Prompt", "sans-serif"],
+      prompt: ["Prompt"],
     },
     extend: {
       colors: {
