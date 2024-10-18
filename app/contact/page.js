@@ -42,10 +42,10 @@ export default function Contact() {
     }
 
     return (
-        <div className="h-screen md:px-96">
+        <div className="lg:px-32 2xl:px-96">
             <div className="h-full flex flex-col items-center pt-32">
                 <p className="text-6xl mb-20"> Contact </p>
-                <div className="grid grid-cols-2 w-full gap-x-32">
+                <div className="grid md:grid-cols-2 w-full gap-32 justify-items-center">
 
                     {/* Contact */}
                     <div className="p-8">
@@ -97,7 +97,7 @@ export default function Contact() {
                     <div className="border p-8 shadow-xl rounded-lg">
                         <p className="text-xl mb-8">Send a message</p>
                         <form>
-                            <div className="grid gap-6 mb-6 grid-cols-2">
+                            <div className="grid gap-6 mb-6 xl:grid-cols-2">
                                 <Input label="Firstname" required onChange={(e) => setFirstname(e.target.value)}/>
                                 <Input label="Lastname" required onChange={(e)=> setLastname(e.target.value)}/>
                                 <Input label="Email" required type="email" onChange={(e)=> setEmail(e.target.value)}/>
