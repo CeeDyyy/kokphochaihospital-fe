@@ -1,15 +1,51 @@
 'use client'
 import { Input, Textarea, Button } from "@material-tailwind/react";
+import { useState } from "react";
 
 export default function Contact() {
+    const [firstname, setFirstname] = useState("");
+    const [lastname, setLastname] = useState("");
+    const [email, setEmail] = useState("");
+    const [phonenumber, setPhonenumber] = useState("");
+    const [detail, setDetail] = useState("");
 
+    function handleMessage() {
+        if (firstname) {
+            console.log(firstname);
+        }else{
+            console.log("Please enter the firstname")
+        }
+
+        if (lastname) {
+            console.log(lastname);
+        } else {
+            console.log("Please enter the lastname")
+        }
+
+        if (email) {
+            console.log(email)
+        } else {
+            console.log("Please enter the email")
+        }
+
+        if (phonenumber) {
+            console.log(phonenumber)
+        } else {
+            console.log("Please enter the phone number")
+        }
+
+        if (detail) {
+            console.log(detail)
+        } else {
+            console.log("Please enter the detail")
+        }
+    }
 
     return (
-        <div className="h-screen md:px-96">
+        <div className="lg:px-32 2xl:px-96">
             <div className="h-full flex flex-col items-center pt-32">
                 <p className="text-6xl mb-20"> Contact </p>
-
-                <div className="grid grid-cols-2 w-full gap-x-32">
+                <div className="grid md:grid-cols-2 w-full gap-32 justify-items-center">
 
                     {/* Contact */}
                     <div className="p-8">
@@ -61,15 +97,15 @@ export default function Contact() {
                     <div className="border p-8 shadow-xl rounded-lg">
                         <p className="text-xl mb-8">Send a message</p>
                         <form>
-                            <div className="grid gap-6 mb-6 grid-cols-2">
-                                <Input label="Firstname" required />
-                                <Input label="Lastname" required />
-                                <Input label="Email" required />
-                                <Input label="Phone number" required />
+                            <div className="grid gap-6 mb-6 xl:grid-cols-2">
+                                <Input label="Firstname" required onChange={(e) => setFirstname(e.target.value)}/>
+                                <Input label="Lastname" required onChange={(e)=> setLastname(e.target.value)}/>
+                                <Input label="Email" required type="email" onChange={(e)=> setEmail(e.target.value)}/>
+                                <Input label="Phone number" required onChange={(e)=> setPhonenumber(e.target.value)}/>
                             </div>
                             <div className="grid">
-                                <Textarea label="Detail" required className="mb-24"/>
-                                <Button color="blue" className="mt-6">Submit</Button>
+                                <Textarea label="Detail" required className="mb-24" onChange={(e)=> setDetail(e.target.value)}/>
+                                <Button color="blue" className="mt-6" onClick={()=> handleMessage()}>Submit</Button>
                             </div>
                         </form>
                     </div>
