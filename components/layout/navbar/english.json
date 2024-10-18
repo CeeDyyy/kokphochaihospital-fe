@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Home",
+        "path": "/"
+    },
+    {
+        "title": "About",
+        "path": "/about"
+    },
+    {
+        "title": "Announce",
+        "path": "/announce"
+    },
+    {
+        "title": "Gallery",
+        "path": "/gallery"
+    },
+    {
+        "title": "ITA",
+        "path": "/ita"
+    },
+    {
+        "title": "Contact",
+        "path": "/contact"
+    }
+]

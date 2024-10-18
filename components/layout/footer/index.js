@@ -1,23 +1,40 @@
 'use client'
 
+import React, { useState, useEffect } from 'react';
+import { useSearchParams } from 'next/navigation';
+
+import Thai from './thai.json';
+import English from './english.json';
+
 export default function Footer() {
+  const searchParams = useSearchParams();
+  const lang = searchParams.get('lang');
+  const [language, setLanguage] = useState(Thai);
+  useEffect(() => {
+    switch (lang) {
+      case "en":
+        setLanguage(English)
+        break;
+      case "th":
+        setLanguage(Thai)
+        break;
+      default:
+        setLanguage(Thai)
+    }
+  }, [lang])
 
   return (
-    <footer className="md:px-[640px]">
+    <footer className="md:px-96">
       <div className="p-8 bg-white">
         <div className="grid md:grid-cols-5 gap-8">
           <div className="col-span-2 justify-self-start grid justify-items-center mx-auto md:mx-0">
             <img src="/images/KPC_LOGO.png" width={96} height={96} />
-            <p>โรงพยาบาลโคกโพธิ์ไชย</p>
+            <p>{language.hospital}</p>
           </div>
           <div className="col-span-3 grid md:flex gap-8">
-            <div>
-              <p>เวลาทำการ</p>
-              <p>จันทร์ - ศุกร์ เปิด 8:00 - 16:00 น.</p>
-              <p>เสาร์ - อาทิตย์ : ปิดทำการ</p>
-              <p>แผนกอุบัติเหตุฉุกเฉิน (ER)</p>
-              <p>เปิดทำการตลอด 24 ชม.</p>
-            </div>
+            <pre className="font-promptinter leading-relaxed">
+              {language.working_hours}
+            </pre>
             <div className="grid gap-y-2">
               <div className="flex items-center gap-x-4">
                 <div className="h-10 w-10 p-2 flex justify-center items-center bg-blue-200 rounded-full">
@@ -42,15 +59,16 @@ export default function Footer() {
                   <svg fill="black" width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <title /> <g id="location"> <path d="M16,1A11,11,0,0,0,5,12C5,23.24,15,30.51,15.42,30.81a1,1,0,0,0,1.16,0C17,30.51,27,23.24,27,12A11,11,0,0,0,16,1Zm0,16a5,5,0,1,1,5-5A5,5,0,0,1,16,17Z" /> </g> </g></svg>
                 </div>
                 <a href="https://maps.app.goo.gl/tUK6QrWyjYWVSvoQ6" target="_blank">
-                  <p>โรงพยาบาลโคกโพธิ์ไชย 63 ม.8 ต.บ้านโคก</p>
-                  <p>อ.โคกโพธิ์ไชย จ.ขอนแก่น 40160</p>
+                  <pre className="font-promptinter leading-relaxed">
+                    {language.address}
+                  </pre>
                 </a>
               </div>
               <div className="flex items-center gap-x-4">
                 <div className="h-10 w-10 p-2 flex justify-center items-center bg-blue-200 rounded-full">
                   <svg width="32px" height="32px" viewBox="-5 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlnsXlink="http://www.w3.org/1999/xlink" fill="#000000"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <title>facebook [#176]</title> <desc>Created with Sketch.</desc> <defs> </defs> <g id="Page-1" stroke="none" strokeWidth={1} fill="none" fillRule="evenodd"> <g id="Dribbble-Light-Preview" transform="translate(-385.000000, -7399.000000)" fill="#000000"> <g id="icons" transform="translate(56.000000, 160.000000)"> <path d="M335.821282,7259 L335.821282,7250 L338.553693,7250 L339,7246 L335.821282,7246 L335.821282,7244.052 C335.821282,7243.022 335.847593,7242 337.286884,7242 L338.744689,7242 L338.744689,7239.14 C338.744689,7239.097 337.492497,7239 336.225687,7239 C333.580004,7239 331.923407,7240.657 331.923407,7243.7 L331.923407,7246 L329,7246 L329,7250 L331.923407,7250 L331.923407,7259 L335.821282,7259 Z" id="facebook-[#176]"> </path> </g> </g> </g> </g></svg>
                 </div>
-                <a href="https://www.facebook.com/Kokphochaihospital" target="_blank">โรงพยาบาลโคกโพธิ์ไชย </a>
+                <a href="https://www.facebook.com/Kokphochaihospital" target="_blank">โรงพยาบาลโคกโพธิ์ไชย</a>
               </div>
             </div>
           </div>

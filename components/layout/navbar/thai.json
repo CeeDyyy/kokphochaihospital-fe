@@ -1,0 +1,26 @@
+[
+    {
+        "title": "หน้าหลัก",
+        "path": "/"
+    },
+    {
+        "title": "เกี่ยวกับ",
+        "path": "/about"
+    },
+    {
+        "title": "ประชาสัมพันธ์",
+        "path": "/announce"
+    },
+    {
+        "title": "ประมวลภาพกิจกรรม",
+        "path": "/gallery"
+    },
+    {
+        "title": "ITA",
+        "path": "/ita"
+    },
+    {
+        "title": "ติดต่อ",
+        "path": "/contact"
+    }
+]
