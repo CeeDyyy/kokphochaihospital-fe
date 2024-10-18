@@ -32,7 +32,7 @@ export default function Footer() {
             <p>{language.hospital}</p>
           </div>
           <div className="col-span-3 grid md:flex gap-8">
-            <pre className="font-promptinter leading-relaxed">
+            <pre className="font-prompt leading-relaxed">
               {language.working_hours}
             </pre>
             <div className="grid gap-y-2">
@@ -59,7 +59,7 @@ export default function Footer() {
                   <svg fill="black" width="32px" height="32px" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" strokeWidth={0} /><g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" /><g id="SVGRepo_iconCarrier"> <title /> <g id="location"> <path d="M16,1A11,11,0,0,0,5,12C5,23.24,15,30.51,15.42,30.81a1,1,0,0,0,1.16,0C17,30.51,27,23.24,27,12A11,11,0,0,0,16,1Zm0,16a5,5,0,1,1,5-5A5,5,0,0,1,16,17Z" /> </g> </g></svg>
                 </div>
                 <a href="https://maps.app.goo.gl/tUK6QrWyjYWVSvoQ6" target="_blank">
-                  <pre className="font-promptinter leading-relaxed">
+                  <pre className="font-prompt leading-relaxed">
                     {language.address}
                   </pre>
                 </a>
