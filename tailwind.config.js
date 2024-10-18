@@ -9,7 +9,7 @@ module.exports = withMT({
   ],
   theme: {
     fontFamily: {
-      prompt: ["Prompt"],
+      promptinter: ["Inter", "Prompt"],
     },
     extend: {
       colors: {

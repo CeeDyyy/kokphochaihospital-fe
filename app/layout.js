@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased font-prompt`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased font-promptinter`}
       >
         <Navbar />
         {children}
