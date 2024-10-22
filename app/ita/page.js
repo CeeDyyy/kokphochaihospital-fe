@@ -6,7 +6,11 @@ import { Select, Option, Accordion, AccordionHeader, AccordionBody, } from "@mat
 
 import Thai from './thai.json';
 import English from './english.json';
+import ITA2563 from './ita2563.json';
 import ITA2564 from './ita2564.json';
+import ITA2565 from './ita2565.json';
+import ITA2566 from './ita2566.json';
+import ITA2567 from './ita2567.json';
 
 function Icon({ id, open }) {
     return (
@@ -50,8 +54,20 @@ export default function Announce() {
     const [ita, setIta] = useState(null);
     useEffect(() => {
         switch (year) {
+            case "2563":
+                setIta(ITA2563)
+                break;
             case "2564":
                 setIta(ITA2564)
+                break;
+            case "2565":
+                setIta(ITA2565)
+                break;
+            case "2566":
+                setIta(ITA2566)
+                break;
+            case "2567":
+                setIta(ITA2567)
                 break;
             default:
                 setIta(null)
@@ -79,13 +95,14 @@ export default function Announce() {
 
             <div>
                 {ita && ita.map((e, index) =>
-                    <Accordion key={index} open={open === index} icon={<Icon id={index} open={open}/>}>
+                    <Accordion key={index} open={open === index} icon={<Icon id={index} open={open} />}>
                         <AccordionHeader className='font-prompt' onClick={() => handleOpen(index)}>{e.title}</AccordionHeader>
                         <AccordionBody className='grid gap-y-4 font-prompt font-normal'>
                             {
                                 e.details.map((detail, dIndex) =>
                                     <div key={dIndex}>
                                         {detail.type === "link" && <a href={detail.url} target='_blank' className='hover:underline hover:text-blue-500'>{detail.title}</a>}
+                                        {detail.type === "text" && <p>{detail.title}</p>}
                                         {detail.type === "heading" &&
 
                                             <details >
@@ -94,7 +111,8 @@ export default function Announce() {
                                                     {
                                                         detail.details.map((link, lIndex) =>
                                                             <div key={lIndex}>
-                                                                <a href={link.url} target='_blank' className='hover:underline hover:text-blue-500'>{link.title}</a>
+                                                                {link.type === "link" && <a href={link.url} target='_blank' className='hover:underline hover:text-blue-500'>{link.title}</a>}
+                                                                {link.type === "text" && <p>{link.title}</p>}
                                                             </div>
                                                         )
                                                     }
