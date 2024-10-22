@@ -5,6 +5,13 @@ export async function GET(req) {  // No `res` in app directory API routes
     const url = new URL(req.url);
     const year = url.searchParams.get('year');  // Access query parameter
 
+    if (year === "null") {
+        return new Response(JSON.stringify(null), {
+            status: 200,
+            headers: { 'Content-Type': 'application/json' }
+        });
+    }
+
     const filePath = path.join(process.cwd(), 'ita', `ita${year}.json`);
     const fileContents = await fs.readFile(filePath, 'utf8');
 
