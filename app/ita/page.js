@@ -48,10 +48,10 @@ export default function Announce() {
     const year = searchParams.get('year');
     const [ita, setIta] = useState(null);
     useEffect(() => {
-       fetch(`/api/ita?year${year}`)
-       .then((response)=>response.json())
-       .then((data)=>setIta(data))
-       .catch((error)=>console.error("error : " + error))
+        fetch(`/api/ita?year=${year}`)
+            .then((response) => response.json())
+            .then((data) => setIta(data))
+            .catch((error) => console.error("error : " + error))
     }, [year])
 
     const createQueryString = useCallback((name, value) => {
