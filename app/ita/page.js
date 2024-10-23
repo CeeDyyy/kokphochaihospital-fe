@@ -6,11 +6,6 @@ import { Select, Option, Accordion, AccordionHeader, AccordionBody, } from "@mat
 
 import Thai from './thai.json';
 import English from './english.json';
-import ITA2563 from './ita2563.json';
-import ITA2564 from './ita2564.json';
-import ITA2565 from './ita2565.json';
-import ITA2566 from './ita2566.json';
-import ITA2567 from './ita2567.json';
 
 function Icon({ id, open }) {
     return (
@@ -53,25 +48,10 @@ export default function Announce() {
     const year = searchParams.get('year');
     const [ita, setIta] = useState(null);
     useEffect(() => {
-        switch (year) {
-            case "2563":
-                setIta(ITA2563)
-                break;
-            case "2564":
-                setIta(ITA2564)
-                break;
-            case "2565":
-                setIta(ITA2565)
-                break;
-            case "2566":
-                setIta(ITA2566)
-                break;
-            case "2567":
-                setIta(ITA2567)
-                break;
-            default:
-                setIta(null)
-        }
+       fetch(`/api/ita?year${year}`)
+       .then((response)=>response.json())
+       .then((data)=>setIta(data))
+       .catch((error)=>console.error("error : " + error))
     }, [year])
 
     const createQueryString = useCallback((name, value) => {
