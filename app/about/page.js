@@ -15,7 +15,7 @@ export default function About() {
                                 ตามหลักเวชศาสตร์ครอบครัว โดยชุมชนมีส่วนร่วมเพื่อประชาชนสุขภาพดี</p>
                         </div>
                     </div>
-                    
+
                     {/* Mission */}
                     <div className="w-full col-end-2 ">
                         <div className="py-8 bg-gradient-to-r from-[#FFFFFF] from-0% via-[#BCEAFF] via-30% to-[#FFFFFF] to-100%">
@@ -32,24 +32,42 @@ export default function About() {
                     {/* Core values */}
                     <div className="w-full col-span-2">
                         <div className="py-8 bg-gradient-to-r from-[#FFFFFF] from-0% via-[#BCEAFF] via-30% to-[#FFFFFF] to-100%">
-                            <p className="text-center text-3xl font-bold">Core values</p>
+                            <p className="text-center text-3xl font-bold mb-6">Core values</p>
                             <div className="w full grid grid-cols-3 justify-items-center">
-                                <div>
+                                <div className="justify-items-center">
+                                    <div className="rounded-full bg-[#1E88E5] justify-items-center aspect-square w-10 content-center mb-2">
+                                        <p className="text-white font-bold text-3xl">K</p>
+                                    </div>
                                     <p>Knowledge and Learning</p>
                                 </div>
-                                <div>
+
+                                <div className="justify-items-center">
+                                    <div className="rounded-full bg-[#1E88E5] justify-items-center aspect-square w-10 content-center mb-2">
+                                        <p className="text-white font-bold text-3xl">P</p>
+                                    </div>
                                     <p>Patient and Personal focus</p>
                                 </div>
-                                <div>
-                                <p>Continuous improvement</p>
+
+                                <div className="justify-items-center">
+                                    <div className="rounded-full bg-[#1E88E5] justify-items-center aspect-square w-10 content-center mb-2">
+                                        <p className="text-white font-bold text-3xl">C</p>
+                                    </div>
+                                    <p>Continuous improvement</p>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                   {/* Hospital name  */}
-                    <div className="w-full col-span-2">
-                        <p className="text-center text-2xl font-bold">โรงพยาบาลโคกโพธิ์ไชย</p>
+                    {/* Hospital name  */}
+                    <div className="w-full col-span-2 justify-items-center">
+                        <div className="flex gap-x-8 md:w-3/5">
+                            <img width={200}
+                                src="https://images.unsplash.com/photo-1612537786199-1c202c6dcfd2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                            <div>
+                                <p className="text-2xl font-bold mb-5">โรงพยาบาลโคกโพธิ์ไชย</p>
+                                <p>โรงพยาบาลโคกโพธิ์ไชย เป็นโรงพยาบาลชุมชน ระดับ F3 สังกัดกระทรวงสาธารณสุข ตั้งอยู่เลขที่ 63 ม.8 ต.บ้านโคก อ.โคกโพธิ์ไชย จ.ขอนแก่น ห่างจากจังหวัดขอนแก่น 76 กิโลเมตร เปิดให้บริการเมื่อที่ 16 ธันวาคม พ.ศ. 2556</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
