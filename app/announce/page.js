@@ -68,7 +68,7 @@ export default function Announce() {
                             <p className="text-sm">{stripHtml(announces[0].content.html).substring(0, 128)}...</p>
                         </CardBody>
                         <CardFooter>
-                            <Button onClick={() => router.push('announce/' + announce.fileName)}>Read More</Button>
+                            <Button onClick={() => router.push('announce/' + announce.fileName)}>{language.readmore}</Button>
                         </CardFooter>
                     </Card>
                 )}
