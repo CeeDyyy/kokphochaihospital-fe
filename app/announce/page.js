@@ -11,6 +11,8 @@ import {
     Button,
 } from "@material-tailwind/react";
 
+import Layout from '@/components/layout/layout';
+
 import Thai from './thai.json';
 import English from './english.json';
 
@@ -32,11 +34,10 @@ export default function Announce() {
     }, [lang])
 
     return (
-        <div className="py-32 md:px-96 grid gap-20">
-            <p className="text-center text-6xl">{language.announce}</p>
-            <div className="grid md:grid-cols-4 justify-items-center gap-8">
-                {[...Array(10)].map((_, index) =>
-                    <Card className="w-64">
+        <Layout title={language.announce}>
+            <div className="mx-auto grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-8 md:gap-x-12">
+                {[...Array(8)].map((_, index) =>
+                    <Card className="w-full md:w-64">
                         <div className="m-4 rounded-2xl overflow-clip">
                             <img
                                 src="https://images.unsplash.com/photo-1540553016722-983e48a2cd10?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80"
@@ -60,6 +61,6 @@ export default function Announce() {
                     </Card>
                 )}
             </div>
-        </div>
+        </Layout>
     );
 }

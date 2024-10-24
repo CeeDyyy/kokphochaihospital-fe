@@ -24,14 +24,14 @@ export default function Footer() {
   }, [lang])
 
   return (
-    <footer className="md:px-96">
+    <footer className="md:px-32 2xl:px-96">
       <div className="p-8 pt-16 bg-white">
-        <div className="grid md:grid-cols-5 gap-8">
-          <div className="md:col-span-2 md:justify-self-start grid justify-items-center">
+        <div className="grid 2xl:grid-cols-5 gap-8">
+          <div className="2xl:col-span-2 2xl:justify-self-start grid justify-items-center">
             <img src="/images/KPC_LOGO.png" width={96} height={96} />
             <p>{language.hospital}</p>
           </div>
-          <div className="md:col-span-3 grid md:flex gap-8">
+          <div className="2xl:col-span-3 grid 2xl:flex gap-8">
             <pre className="font-prompt leading-relaxed">
               {language.working_hours}
             </pre>

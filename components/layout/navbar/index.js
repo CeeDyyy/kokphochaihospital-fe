@@ -34,7 +34,7 @@ export default function Navbar() {
   }, [searchParams])
 
   return (
-    <nav className="z-50 fixed h-16 w-screen md:px-96 flex justify-evenly items-center bg-white">
+    <nav className="z-50 fixed h-16 w-screen md:px-32 2xl:px-96 flex justify-evenly items-center bg-white">
       <button onClick={() => router.push('/')} className="pointer">
         <img src="/images/KPC_LOGO.png" width={48} height={48} />
       </button>
