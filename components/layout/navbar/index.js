@@ -42,7 +42,7 @@ export default function Navbar() {
         <button onClick={() => router.push('/')} className="col-start-2 lg:col-start-1 pointer">
           <img src="/images/KPC_LOGO.png" width={48} height={48} />
         </button>
-        <div className="hidden lg:flex justify-center items-center gap-x-8">
+        <div className="hidden lg:flex justify-center items-center gap-x-2 xl:gap-x-4 2xl:gap-x-8">
           {language.menu.map((page, index) =>
             <button onClick={() => router.push(page.path)} className={`py-2 px-4 ${pathname === page.path ? "text-blue-500" : ""} hover:bg-gray-100 active:bg-gray-300 rounded-lg duration-150`} key={index}>{page.title}</button>
           )}
