@@ -62,7 +62,7 @@ export default function About() {
                     <div className="w-full col-span-2 justify-items-center">
                         <div className="flex gap-x-8 md:w-3/5">
                             <img width={200}
-                                src="https://images.unsplash.com/photo-1612537786199-1c202c6dcfd2?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
+                                src="https://kokphochaihospital.wordpress.com/wp-content/uploads/2020/04/e0b897e0b8b3e0b980e0b899e0b8b5e0b8a2e0b89ae0b89ae0b8b8e0b884e0b8a5e0b8b2e0b881e0b8a3_e0b991e0b998e0b990e0b999e0b992e0b995_0013.jpg" />
                             <div>
                                 <p className="text-2xl font-bold mb-5">โรงพยาบาลโคกโพธิ์ไชย</p>
                                 <p>โรงพยาบาลโคกโพธิ์ไชย เป็นโรงพยาบาลชุมชน ระดับ F3 สังกัดกระทรวงสาธารณสุข ตั้งอยู่เลขที่ 63 ม.8 ต.บ้านโคก อ.โคกโพธิ์ไชย จ.ขอนแก่น ห่างจากจังหวัดขอนแก่น 76 กิโลเมตร เปิดให้บริการเมื่อที่ 16 ธันวาคม พ.ศ. 2556</p>
