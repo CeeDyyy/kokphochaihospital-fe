@@ -24,7 +24,7 @@ export default function Footer() {
   }, [lang])
 
   return (
-    <footer className="pt-16 px-8 md:px-32 2xl:px-96 bg-white">
+    <footer className="pt-32 px-8 md:px-32 2xl:px-96 bg-white">
       <div className="grid 2xl:grid-cols-5 gap-8">
         <div className="2xl:col-span-2 2xl:justify-self-start grid justify-items-center">
           <img src="/images/KPC_LOGO.png" width={96} height={96} />
