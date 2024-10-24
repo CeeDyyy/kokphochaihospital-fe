@@ -52,7 +52,7 @@ export default function Announce() {
     };
 
     return (
-        <Layout title={language.announce}>
+        <Layout title={language.title}>
             <div className="mx-auto grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-8 md:gap-x-12">
                 {announces.map((announce, index) =>
                     <Card className="w-full md:w-64" key={index}>
