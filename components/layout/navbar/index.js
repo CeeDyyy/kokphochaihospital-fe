@@ -38,7 +38,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="z-50 fixed h-16 w-screen px-8 lg:px-32 2xl:px-96 grid grid-cols-3 justify-items-center content-center lg:flex justify-evenly items-center bg-white">
+      <nav className="z-50 fixed h-16 w-screen px-8 md:px-32 2xl:px-96 grid grid-cols-3 justify-items-center content-center lg:flex justify-evenly items-center bg-white">
         <button onClick={() => router.push('/')} className="col-start-2 lg:col-start-1 pointer">
           <img src="/images/KPC_LOGO.png" width={48} height={48} />
         </button>
