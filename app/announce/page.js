@@ -6,7 +6,6 @@ import {
     Card,
     CardHeader,
     CardBody,
-    CardFooter,
     Typography,
     Button,
 } from "@material-tailwind/react";
@@ -53,23 +52,35 @@ export default function Announce() {
 
     return (
         <Layout title={language.title}>
-            <div className="mx-auto grid sm:grid-cols-2 xl:grid-cols-3 2xl:grid-cols-4 justify-items-center gap-8 md:gap-x-12">
+            <div className="mx-auto grid lg:grid-cols-2 justify-items-center gap-8 md:gap-x-12">
                 {announces.map((announce, index) =>
-                    <Card className="w-full md:w-64" key={index}>
-                        <div className="m-4 rounded-2xl overflow-clip">
+                    <Card className="w-full max-w-[48rem] flex-row" key={index}>
+                        <CardHeader
+                            shadow={false}
+                            floated={false}
+                            className="m-0 w-2/5 shrink-0 rounded-r-none"
+                        >
                             <img
                                 src={announce.content.image}
                                 alt="card-image"
+                                className="h-full w-full object-cover"
                             />
-                        </div>
+                        </CardHeader>
                         <CardBody>
-                            <p className="font-semibold text-neutral-600">{announce.content.title}</p>
-                            <p className="text-xs mt-1 mb-3">{announce.content.date}</p>
-                            <p className="text-sm">{stripHtml(announces[0].content.html).substring(0, 128)}...</p>
+                            <Typography variant="h6" color="gray" className="mb-4 uppercase font-prompt">
+                                {announce.content.date}
+                            </Typography>
+                            <Typography variant="h5" color="blue-gray" className="mb-2 font-prompt">
+                                {announce.content.title}
+                            </Typography>
+                            <Typography color="gray" className="mb-8 font-normal font-prompt">
+                                {stripHtml(announces[0].content.html).substring(0, 128)}...
+                            </Typography>
+                            <Button variant="text" className="flex items-center gap-2 font-prompt" onClick={() => router.push('announce/' + announce.fileName)}>
+                                {language.readmore}
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2} className="h-4 w-4" ><path strokeLinecap="round" strokeLinejoin="round" d="M17.25 8.25L21 12m0 0l-3.75 3.75M21 12H3" /></svg>
+                            </Button>
                         </CardBody>
-                        <CardFooter>
-                            <Button className="font-prompt" onClick={() => router.push('announce/' + announce.fileName)}>{language.readmore}</Button>
-                        </CardFooter>
                     </Card>
                 )}
             </div>
