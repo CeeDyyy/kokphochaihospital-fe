@@ -50,7 +50,7 @@ export default function Announce() {
                 {galleries.map((gallery, index) =>
                     <Card
                         shadow={false}
-                        className="relative grid h-[40rem] w-full max-w-[20rem] items-end justify-center overflow-hidden text-center hover:scale-105 duration-150"
+                        className="grow basis-1/4 relative grid h-[40rem] items-end justify-center overflow-hidden text-center hover:scale-105 duration-150"
                         key={index}
                     >
                         <a href={gallery.url} target="_blank">
