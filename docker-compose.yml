@@ -7,7 +7,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - "3000:3000" # Map the container's port 3000 to the host machine's port 3000
+      - "3000:80" # Map the container's port 3000 to the host machine's port 80
     volumes:
       - .:/app # Bind the current directory to the /app directory inside the container
       - /app/node_modules # Prevent overwriting node_modules with the host's copy
